@@ -1,3 +1,13 @@
+- Connect to Hadoop cluster if not already
+```
+ssh $USER@localhost -p 2222
+```
+
+- Start HBase shell
+```
+hbase shell
+```
+
 - Ex 1
 ```
 create 'notifications','attributes','metrics'
@@ -50,7 +60,7 @@ create 'people', 'd'
 ```
 
 ```
-put 'people', 'jmhsieh', 'd:hair', 'black',
+put 'people', 'jmhsieh', 'd:hair', 'black'
 ```
 
 
@@ -122,3 +132,73 @@ deleteall 'people', 'jmhsieh'
 ```
 get 'people' , 'jmhsieh'
 ```
+
+
+
+## General  HBase shell commands
+
+- Show cluster status. Can be 'summary', 'simple', or 'detailed'. The default is 'summary'.
+```
+status
+status 'simple'
+status 'summary'
+status 'detailed'
+```
+
+- Output this HBase versionUsage:
+```
+version
+```
+
+- Show the current hbase user.Usage:
+```
+whoami
+```
+
+
+## Tables Management commands
+- Describe the named table.
+```
+describe 'people'
+```
+
+- Start disable of named table
+```
+disable 'people'
+```
+
+- verifies Is named table disabled
+```
+is_disabled 'people'
+```
+
+- Start enable of named table
+```
+enable 'people'
+```
+
+- Does the named table exist
+```
+exists 'people'
+```
+
+- List all tables in hbase. Optional regular expression parameter could be used to filter the output
+```
+list
+```
+
+- Show all the filters in hbase.
+```
+show_filters
+```
+
+
+## HBase surgery tools
+```
+compact 'people'
+```
+
+```
+flush 'people'
+```
+
