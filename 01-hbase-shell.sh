@@ -202,3 +202,8 @@ compact 'people'
 flush 'people'
 ```
 
+
+## Quit
+```
+quit()
+```
