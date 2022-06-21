@@ -1,6 +1,6 @@
 - Connect to Hadoop cluster if not already
 ```
-ssh $USER@localhost -p 2222
+ssh $USER@20.228.121.141 -p 2222
 ```
 
 - Start HBase shell
