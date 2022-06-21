@@ -3,6 +3,8 @@
 ssh $USER@20.228.121.141 -p 2222
 ```
 
+sudo su - hbase
+
 - Start HBase shell
 ```
 hbase shell
